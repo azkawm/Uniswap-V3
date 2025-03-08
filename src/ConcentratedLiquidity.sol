@@ -5,7 +5,8 @@ import {INonfungiblePositionManager} from "@uniswapv3-periphery/interfaces/INonf
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IMockKari} from "./interfaces/IMockKari.sol";
 import {console} from "forge-std/Test.sol";
-
+// import '@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol';
+// import '@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol';
 interface IUniswapV3Factory {
     function createAndInitializePoolIfNecessary(
         address token0,
