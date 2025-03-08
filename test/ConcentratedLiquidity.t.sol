@@ -23,12 +23,12 @@ contract ConcentratedLiquidityTest is Test {
 
         //address _pool, address _baseToken, address _token0, uint24 _fee
         concentratedLiquidity = new ConcentratedLiquidity(0xC36442b4a4522E871399CD717aBDD847Ab11FE88, address(kari), address(ausd), 3000);
-        deal(address(ausd), address(this), 1000e6);
+        deal(address(ausd), address(this), 10000e6);
         deal(address(kari), address(this), 10000e18);
     }
 
     function test_initPool() public {
-        IERC20(ausd).approve(address(concentratedLiquidity), 1000e6);
+        IERC20(ausd).approve(address(concentratedLiquidity), 2000e6);
         console.log("AUSD", IERC20(ausd).balanceOf(address(this)));
         //kari.mint(address(concentratedLiquidity), 999999948301786405);
         //kari.mint(address(concentratedLiquidity), 10000e18);
